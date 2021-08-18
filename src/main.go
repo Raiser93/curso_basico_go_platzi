@@ -28,60 +28,60 @@ func main() {
 	// fmt.Println(a, b, c, d)
 
 	// Area cuadrado
-	const baseCuadrado = 10
-	areaCuadrado := baseCuadrado * baseCuadrado
-	fmt.Println("Area cuadrado es:", areaCuadrado)
+	// const baseCuadrado = 10
+	// areaCuadrado := baseCuadrado * baseCuadrado
+	// fmt.Println("Area cuadrado es:", areaCuadrado)
 
-	x := 10
-	y := 50
+	// x := 10
+	// y := 50
 
 	// Suma
-	result := x + y
-	fmt.Println("Suma:", result)
+	// result := x + y
+	// fmt.Println("Suma:", result)
 
 	// Resta
-	result = y - x
-	fmt.Println("Resta:", result)
+	// result = y - x
+	// fmt.Println("Resta:", result)
 
 	// Multiplicacion
-	result = x * y
-	fmt.Println("Multiplicación", result)
+	// result = x * y
+	// fmt.Println("Multiplicación", result)
 
 	// División
-	result = y / x
-	fmt.Println("División:", result)
+	// result = y / x
+	// fmt.Println("División:", result)
 
 	// Mudulo/residuo
-	result = y % x
-	fmt.Println("Mudulo:", result)
+	// result = y % x
+	// fmt.Println("Mudulo:", result)
 
 	// Incrementar
-	x++
-	fmt.Println("Incrementar:", x)
+	// x++
+	// fmt.Println("Incrementar:", x)
 
 	// Decrementar
-	x--
-	fmt.Println("Decrementar:", x)
+	// x--
+	// fmt.Println("Decrementar:", x)
 
 	// Reto
 	// Area rectangulo
-	const largo = 6
-	const ancho = 2
-	areaRectangulo := largo * ancho
-	fmt.Println("Area del rectangulo:", areaRectangulo)
+	// const largo = 6
+	// const ancho = 2
+	// areaRectangulo := largo * ancho
+	// fmt.Println("Area del rectangulo:", areaRectangulo)
 
 	// Area trapecio
-	const baseMayor = 9.5
-	const baseMenor = 3.5
-	const altura = 4
-	areaTrapecio := ((baseMayor + baseMenor) / 2) * altura
-	fmt.Println("Area de trapecio:", areaTrapecio)
+	// const baseMayor = 9.5
+	// const baseMenor = 3.5
+	// const altura = 4
+	// areaTrapecio := ((baseMayor + baseMenor) / 2) * altura
+	// fmt.Println("Area de trapecio:", areaTrapecio)
 
 	// Area circulo
-	const radio = 3
-	const pi = 3.14
-	areaCirculo := pi * (radio * radio)
-	fmt.Println("Area de circulo:", areaCirculo)
+	// const radio = 3
+	// const pi = 3.14
+	// areaCirculo := pi * (radio * radio)
+	// fmt.Println("Area de circulo:", areaCirculo)
 
 	//Numeros enteros
 	//int = Depende del OS (32 o 64 bits)
@@ -109,4 +109,29 @@ func main() {
 	//Complex64 = Real e Imaginario float32
 	//Complex128 = Real e Imaginario float64
 	//Ejemplo : c:=10 + 8i
+
+	// Declaracion de variables
+	helloMessage := "Hello"
+	worldMessage := "World"
+
+	// Println
+	fmt.Println(helloMessage, worldMessage)
+	fmt.Println(helloMessage, worldMessage)
+
+	// Printf
+	nombre := "Platzi"
+	cursos := 500
+
+	// Por buenas practicas poner la letra inicial del tipo de dato si  se conoce
+	fmt.Printf("%s tiene mas de %d cursos\n", nombre, cursos)
+	// Si no poner v para los datos que se desconosca el tipo de dato
+	fmt.Printf("%v tiene mas de %v cursos\n", nombre, cursos)
+
+	// Sprintf
+	message := fmt.Sprintf("%s tiene más de %d cursos", nombre, cursos)
+	fmt.Println(message)
+
+	// Tipos de datos
+	fmt.Printf("helloMessage: %T\n", helloMessage)
+	fmt.Printf("Cursos: %T\n", cursos)
 }
