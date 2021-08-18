@@ -2,6 +2,22 @@ package main
 
 import "fmt"
 
+func normalFunction(message string) {
+	fmt.Println(message)
+}
+
+func tripleArgument(a, b int, c string) {
+	println(a, b, c)
+}
+
+func returnValue(a int) int {
+	return a * 2
+}
+
+func doubleReturn(a int) (c, d int) {
+	return a, a * 2
+}
+
 func main() {
 	// Primera linea de GO
 	// fmt.Println("Hola mundo")
@@ -111,27 +127,42 @@ func main() {
 	//Ejemplo : c:=10 + 8i
 
 	// Declaracion de variables
-	helloMessage := "Hello"
-	worldMessage := "World"
+	// helloMessage := "Hello"
+	// worldMessage := "World"
 
-	// Println
-	fmt.Println(helloMessage, worldMessage)
-	fmt.Println(helloMessage, worldMessage)
+	// // Println
+	// fmt.Println(helloMessage, worldMessage)
+	// fmt.Println(helloMessage, worldMessage)
 
-	// Printf
-	nombre := "Platzi"
-	cursos := 500
+	// // Printf
+	// nombre := "Platzi"
+	// cursos := 500
 
-	// Por buenas practicas poner la letra inicial del tipo de dato si  se conoce
-	fmt.Printf("%s tiene mas de %d cursos\n", nombre, cursos)
-	// Si no poner v para los datos que se desconosca el tipo de dato
-	fmt.Printf("%v tiene mas de %v cursos\n", nombre, cursos)
+	// // Por buenas practicas poner la letra inicial del tipo de dato si  se conoce
+	// fmt.Printf("%s tiene mas de %d cursos\n", nombre, cursos)
+	// // Si no poner v para los datos que se desconosca el tipo de dato
+	// fmt.Printf("%v tiene mas de %v cursos\n", nombre, cursos)
 
-	// Sprintf
-	message := fmt.Sprintf("%s tiene más de %d cursos", nombre, cursos)
-	fmt.Println(message)
+	// // Sprintf
+	// message := fmt.Sprintf("%s tiene más de %d cursos", nombre, cursos)
+	// fmt.Println(message)
 
-	// Tipos de datos
-	fmt.Printf("helloMessage: %T\n", helloMessage)
-	fmt.Printf("Cursos: %T\n", cursos)
+	// // Tipos de datos
+	// fmt.Printf("helloMessage: %T\n", helloMessage)
+	// fmt.Printf("Cursos: %T\n", cursos)
+
+	normalFunction("Hola Mundo")
+	normalFunction("Hola Mundo 2")
+	normalFunction("Hola Mundo 3")
+
+	tripleArgument(1, 2, "Hola")
+
+	value := returnValue(2)
+	fmt.Println("Value:", value)
+
+	value1, value2 := doubleReturn(2)
+	println("Value 1 y value 2:", value1, value2)
+
+	value1, _ = doubleReturn(3)
+	println("Value 1 y value 2:", value1)
 }
