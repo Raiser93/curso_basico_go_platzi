@@ -165,4 +165,45 @@ func main() {
 
 	// value1, _ = doubleReturn(3)
 	// println("Value 1 y value 2:", value1)
+
+	// For condicional
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
+	}
+	fmt.Printf("\n")
+
+	// For while
+	counter := 0
+	for counter < 10 {
+		fmt.Println(counter)
+		counter++
+	}
+	fmt.Printf("\n")
+	// For forever
+	// counterForever := 0
+	// for {
+	// 	fmt.Println(counterForever)
+	// 	counterForever++
+	// }
+
+	// For range
+	listaNumeroPares := []int{2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
+	for i, par := range listaNumeroPares {
+		fmt.Printf("posicion %d numero par %d \n", i, par)
+	}
+
+	fmt.Printf("\n")
+
+	// Reto
+	for i := 10; i > 0; i-- {
+		fmt.Println(i)
+	}
+
+	fmt.Printf("\n")
+
+	counter = 10
+	for counter > 0 {
+		fmt.Println(counter)
+		counter--
+	}
 }
