@@ -151,18 +151,18 @@ func main() {
 	// fmt.Printf("helloMessage: %T\n", helloMessage)
 	// fmt.Printf("Cursos: %T\n", cursos)
 
-	normalFunction("Hola Mundo")
-	normalFunction("Hola Mundo 2")
-	normalFunction("Hola Mundo 3")
+	// normalFunction("Hola Mundo")
+	// normalFunction("Hola Mundo 2")
+	// normalFunction("Hola Mundo 3")
 
-	tripleArgument(1, 2, "Hola")
+	// tripleArgument(1, 2, "Hola")
 
-	value := returnValue(2)
-	fmt.Println("Value:", value)
+	// value := returnValue(2)
+	// fmt.Println("Value:", value)
 
-	value1, value2 := doubleReturn(2)
-	println("Value 1 y value 2:", value1, value2)
+	// value1, value2 := doubleReturn(2)
+	// println("Value 1 y value 2:", value1, value2)
 
-	value1, _ = doubleReturn(3)
-	println("Value 1 y value 2:", value1)
+	// value1, _ = doubleReturn(3)
+	// println("Value 1 y value 2:", value1)
 }
