@@ -223,28 +223,47 @@ func main() {
 	// 	counter--
 	// }
 
-	valor1 := 1
-	valor2 := 2
+	// valor1 := 1
+	// valor2 := 2
 
-	if valor1 == 1 {
-		fmt.Println("Es 1")
-	} else {
-		fmt.Println("No es 1")
+	// if valor1 == 1 {
+	// 	fmt.Println("Es 1")
+	// } else {
+	// 	fmt.Println("No es 1")
+	// }
+
+	// // With and
+
+	// if valor1 == 1 && valor2 == 2 {
+	// 	fmt.Println("Es verdad")
+	// }
+
+	// if valor1 == 0 || valor2 == 2 {
+	// 	fmt.Println("Es verdad, OR")
+	// }
+
+	// fmt.Println(esPar(6))
+	// fmt.Println(esPar(7))
+
+	// fmt.Println(validarUsuario("raiser93", "1234"))
+	// fmt.Println(validarUsuario("raiser93", "12345"))
+
+	switch modulo := 6 % 2; modulo {
+	case 0:
+		fmt.Println("Es par")
+		break
+	default:
+		fmt.Println("Es impar")
 	}
 
-	// With and
-
-	if valor1 == 1 && valor2 == 2 {
-		fmt.Println("Es verdad")
+	// sin codicion
+	value := 101
+	switch {
+	case value > 100:
+		fmt.Println("Es mayor a 100")
+	case value < 0:
+		fmt.Println("Es menor a 0")
+	default:
+		fmt.Println("No condicion")
 	}
-
-	if valor1 == 0 || valor2 == 2 {
-		fmt.Println("Es verdad, OR")
-	}
-
-	fmt.Println(esPar(6))
-	fmt.Println(esPar(7))
-
-	fmt.Println(validarUsuario("raiser93", "1234"))
-	fmt.Println(validarUsuario("raiser93", "12345"))
 }
