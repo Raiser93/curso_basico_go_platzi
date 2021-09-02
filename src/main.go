@@ -18,6 +18,22 @@ func doubleReturn(a int) (c, d int) {
 	return a, a * 2
 }
 
+func esPar(a int) string {
+	if a%2 == 0 {
+		return "Es par"
+	} else {
+		return "No es par"
+	}
+}
+
+func validarUsuario(u string, p string) string {
+	if u == "raiser93" && p == "1234" {
+		return "Usuario valido"
+	} else {
+		return "Credenciales incorrectas"
+	}
+}
+
 func main() {
 	// Primera linea de GO
 	// fmt.Println("Hola mundo")
@@ -166,44 +182,69 @@ func main() {
 	// value1, _ = doubleReturn(3)
 	// println("Value 1 y value 2:", value1)
 
-	// For condicional
-	for i := 0; i < 10; i++ {
-		fmt.Println(i)
-	}
-	fmt.Printf("\n")
+	// // For condicional
+	// for i := 0; i < 10; i++ {
+	// 	fmt.Println(i)
+	// }
+	// fmt.Printf("\n")
 
-	// For while
-	counter := 0
-	for counter < 10 {
-		fmt.Println(counter)
-		counter++
-	}
-	fmt.Printf("\n")
-	// For forever
-	// counterForever := 0
-	// for {
-	// 	fmt.Println(counterForever)
-	// 	counterForever++
+	// // For while
+	// counter := 0
+	// for counter < 10 {
+	// 	fmt.Println(counter)
+	// 	counter++
+	// }
+	// fmt.Printf("\n")
+	// // For forever
+	// // counterForever := 0
+	// // for {
+	// // 	fmt.Println(counterForever)
+	// // 	counterForever++
+	// // }
+
+	// // For range
+	// listaNumeroPares := []int{2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
+	// for i, par := range listaNumeroPares {
+	// 	fmt.Printf("posicion %d numero par %d \n", i, par)
 	// }
 
-	// For range
-	listaNumeroPares := []int{2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
-	for i, par := range listaNumeroPares {
-		fmt.Printf("posicion %d numero par %d \n", i, par)
+	// fmt.Printf("\n")
+
+	// // Reto
+	// for i := 10; i > 0; i-- {
+	// 	fmt.Println(i)
+	// }
+
+	// fmt.Printf("\n")
+
+	// counter = 10
+	// for counter > 0 {
+	// 	fmt.Println(counter)
+	// 	counter--
+	// }
+
+	valor1 := 1
+	valor2 := 2
+
+	if valor1 == 1 {
+		fmt.Println("Es 1")
+	} else {
+		fmt.Println("No es 1")
 	}
 
-	fmt.Printf("\n")
+	// With and
 
-	// Reto
-	for i := 10; i > 0; i-- {
-		fmt.Println(i)
+	if valor1 == 1 && valor2 == 2 {
+		fmt.Println("Es verdad")
 	}
 
-	fmt.Printf("\n")
-
-	counter = 10
-	for counter > 0 {
-		fmt.Println(counter)
-		counter--
+	if valor1 == 0 || valor2 == 2 {
+		fmt.Println("Es verdad, OR")
 	}
+
+	fmt.Println(esPar(6))
+	fmt.Println(esPar(7))
+
+	fmt.Println(validarUsuario("raiser93", "1234"))
+	fmt.Println(validarUsuario("raiser93", "12345"))
 }
