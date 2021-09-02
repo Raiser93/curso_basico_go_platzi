@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func normalFunction(message string) {
 	fmt.Println(message)
@@ -31,6 +34,22 @@ func validarUsuario(u string, p string) string {
 		return "Usuario valido"
 	} else {
 		return "Credenciales incorrectas"
+	}
+}
+
+func isPalindromo(texto string) {
+	var textReverse string
+
+	texto = strings.ToLower(texto)
+
+	for i := len(texto) - 1; i >= 0; i-- {
+		textReverse += string(texto[i])
+	}
+
+	if texto == textReverse {
+		fmt.Println("Es palindromo")
+	} else {
+		fmt.Println("No es palindromo")
 	}
 }
 
@@ -286,27 +305,40 @@ func main() {
 	// }
 
 	// Array
-	var array [4]int
-	array[0] = 1
-	array[1] = 2
-	fmt.Println(array, len(array), cap(array))
+	// var array [4]int
+	// array[0] = 1
+	// array[1] = 2
+	// fmt.Println(array, len(array), cap(array))
 
-	// slice
-	slice := []int{0, 1, 2, 3, 4, 5, 6}
-	fmt.Println(slice, len(slice), cap(slice))
+	// // slice
+	// slice := []int{0, 1, 2, 3, 4, 5, 6}
+	// fmt.Println(slice, len(slice), cap(slice))
 
-	// Metodos en el slice
-	fmt.Println(slice[0])
-	fmt.Println(slice[:3])
-	fmt.Println(slice[2:4])
-	fmt.Println(slice[4:])
+	// // Metodos en el slice
+	// fmt.Println(slice[0])
+	// fmt.Println(slice[:3])
+	// fmt.Println(slice[2:4])
+	// fmt.Println(slice[4:])
 
-	// append
-	slice = append(slice, 7)
-	fmt.Println(slice)
+	// // append
+	// slice = append(slice, 7)
+	// fmt.Println(slice)
 
-	// append nueva list
-	newSlice := []int{8, 9, 10}
-	slice = append(slice, newSlice...)
-	fmt.Println(slice)
+	// // append nueva list
+	// newSlice := []int{8, 9, 10}
+	// slice = append(slice, newSlice...)
+	// fmt.Println(slice)
+
+	slice := []string{"Hola", "que", "hace?"}
+	for i := range slice {
+		fmt.Println(i)
+	}
+
+	isPalindromo("Ama")
+	isPalindromo("amor a roma")
+	isPalindromo("casas")
+
+	var palabra string
+	fmt.Scan(&palabra)
+	isPalindromo(palabra)
 }
