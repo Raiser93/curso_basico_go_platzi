@@ -248,22 +248,40 @@ func main() {
 	// fmt.Println(validarUsuario("raiser93", "1234"))
 	// fmt.Println(validarUsuario("raiser93", "12345"))
 
-	switch modulo := 6 % 2; modulo {
-	case 0:
-		fmt.Println("Es par")
-		break
-	default:
-		fmt.Println("Es impar")
-	}
+	// switch modulo := 6 % 2; modulo {
+	// case 0:
+	// 	fmt.Println("Es par")
+	// 	break
+	// default:
+	// 	fmt.Println("Es impar")
+	// }
 
-	// sin codicion
-	value := 101
-	switch {
-	case value > 100:
-		fmt.Println("Es mayor a 100")
-	case value < 0:
-		fmt.Println("Es menor a 0")
-	default:
-		fmt.Println("No condicion")
+	// // sin codicion
+	// value := 101
+	// switch {
+	// case value > 100:
+	// 	fmt.Println("Es mayor a 100")
+	// case value < 0:
+	// 	fmt.Println("Es menor a 0")
+	// default:
+	// 	fmt.Println("No condicion")
+	// }
+
+	// Defer
+	defer fmt.Println("Hola")
+	fmt.Println("Mundo")
+
+	// Continue y  break
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
+		if i == 2 {
+			fmt.Println("Es 2")
+			continue
+		}
+
+		if i == 8 {
+			fmt.Println("Es 8")
+			break
+		}
 	}
 }
