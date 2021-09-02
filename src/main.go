@@ -53,6 +53,11 @@ func isPalindromo(texto string) {
 	}
 }
 
+type car struct {
+	brand string
+	year  int
+}
+
 func main() {
 	// Primera linea de GO
 	// fmt.Println("Hola mundo")
@@ -342,18 +347,27 @@ func main() {
 	// fmt.Scan(&palabra)
 	// isPalindromo(palabra)
 
-	m := make(map[string]int)
-	m["Jose"] = 14
-	m["Pepe"] = 20
+	// m := make(map[string]int)
+	// m["Jose"] = 14
+	// m["Pepe"] = 20
 
-	fmt.Println(m)
+	// fmt.Println(m)
 
-	// Recorrer map
-	for i, v := range m {
-		fmt.Println(i, v)
-	}
+	// // Recorrer map
+	// for i, v := range m {
+	// 	fmt.Println(i, v)
+	// }
 
-	// Encontrar valor
-	value, ok := m["Jose"]
-	fmt.Println(value, ok)
+	// // Encontrar valor
+	// value, ok := m["Jose"]
+	// fmt.Println(value, ok)
+
+	myCar := car{brand: "Ford", year: 2020}
+	fmt.Println(myCar)
+
+	// Otra manera
+	var otherCar car
+	otherCar.brand = "Ferrari"
+
+	fmt.Println(otherCar)
 }
