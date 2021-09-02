@@ -329,16 +329,31 @@ func main() {
 	// slice = append(slice, newSlice...)
 	// fmt.Println(slice)
 
-	slice := []string{"Hola", "que", "hace?"}
-	for i := range slice {
-		fmt.Println(i)
+	// slice := []string{"Hola", "que", "hace?"}
+	// for i := range slice {
+	// 	fmt.Println(i)
+	// }
+
+	// isPalindromo("Ama")
+	// isPalindromo("amor a roma")
+	// isPalindromo("casas")
+
+	// var palabra string
+	// fmt.Scan(&palabra)
+	// isPalindromo(palabra)
+
+	m := make(map[string]int)
+	m["Jose"] = 14
+	m["Pepe"] = 20
+
+	fmt.Println(m)
+
+	// Recorrer map
+	for i, v := range m {
+		fmt.Println(i, v)
 	}
 
-	isPalindromo("Ama")
-	isPalindromo("amor a roma")
-	isPalindromo("casas")
-
-	var palabra string
-	fmt.Scan(&palabra)
-	isPalindromo(palabra)
+	// Encontrar valor
+	value, ok := m["Jose"]
+	fmt.Println(value, ok)
 }
